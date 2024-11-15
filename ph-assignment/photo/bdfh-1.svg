@@ -1,0 +1,132 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 500 500"
+  width="500"
+  height="500"
+>
+  <!-- Background Gradient -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00B8D4; stop-opacity:1" /> <!-- Cyan -->
+      <stop offset="100%" style="stop-color:#8E24AA; stop-opacity:1" /> <!-- Purple -->
+    </linearGradient>
+    <radialGradient id="grad2" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#3F51B5; stop-opacity:0.8" /> <!-- Indigo -->
+      <stop offset="100%" style="stop-color:#E91E63; stop-opacity:0" /> <!-- Pink -->
+    </radialGradient>
+  </defs>
+
+  <!-- Outer Circle with Gradient -->
+  <circle
+    cx="250"
+    cy="250"
+    r="220"
+    fill="url(#grad1)"
+    stroke="#3F51B5"
+    stroke-width="10"
+    stroke-dasharray="15,10"
+    stroke-linecap="round"
+    class="rotate-circle"
+  />
+
+  <!-- Inner Circle for Emphasis -->
+  <circle
+    cx="250"
+    cy="250"
+    r="130"
+    fill="none"
+    stroke="#8E24AA"
+    stroke-width="6"
+    stroke-dasharray="20,10"
+    stroke-linecap="round"
+    class="rotate-circle"
+  />
+
+  <!-- Animation Circle -->
+  <circle
+    cx="250"
+    cy="250"
+    r="150"
+    fill="none"
+    stroke="#00B8D4"
+    stroke-width="5"
+    stroke-dasharray="10,5"
+    stroke-linecap="round"
+    class="rotate-circle"
+  />
+
+  <!-- Central Star (Symbolizing the Future) -->
+  <path
+    d="M250,190 L235,250 L250,310 L265,250 Z"
+    fill="#E91E63"
+    stroke="#00B8D4"
+    stroke-width="5"
+  />
+  <path
+    d="M250,190 L215,250 L250,310 L285,250 Z"
+    fill="#E91E63"
+    stroke="#00B8D4"
+    stroke-width="5"
+  />
+
+  <!-- Dynamic "BFH" Text -->
+  <text
+    x="250"
+    y="230"
+    text-anchor="middle"
+    font-family="Verdana, Geneva, sans-serif"
+    font-size="70"
+    font-weight="bold"
+    fill="#FF4081"
+    stroke="#3F51B5"
+    stroke-width="3"
+  >
+    BFH
+  </text>
+
+  <!-- Tagline -->
+  <text
+    x="250"
+    y="300"
+    text-anchor="middle"
+    font-family="Verdana, Geneva, sans-serif"
+    font-size="28"
+    font-weight="light"
+    fill="#FF4081"
+  >
+    Bangladesh Future Hub
+  </text>
+
+  <!-- Hover Animations for Interactivity -->
+  <style>
+    .rotate-circle {
+      transition: transform 0.8s ease-in-out, stroke-width 0.3s ease, stroke 0.3s ease;
+      transform-origin: center;
+      animation: rotateGear 12s linear infinite; /* Slower spin */
+    }
+
+    @keyframes rotateGear {
+      0% {
+        transform: rotate(0deg);
+        stroke: #00B8D4; /* Start color (Cyan) */
+      }
+      50% {
+        transform: rotate(180deg);
+        stroke: #8E24AA; /* Halfway color (Purple) */
+      }
+      100% {
+        transform: rotate(360deg);
+        stroke: #FF4081; /* End color (Pink) */
+      }
+    }
+
+    path, text {
+      transition: fill 0.3s ease, stroke-width 0.3s ease;
+    }
+
+    path:hover, text:hover {
+      fill: #FF4081; /* Pink hover effect */
+      stroke-width: 2;
+    }
+  </style>
+</svg>
